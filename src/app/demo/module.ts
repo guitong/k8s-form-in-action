@@ -30,16 +30,27 @@ const DEFAULT_MONACO_OPTIONS: monaco.editor.IEditorConstructionOptions = {
 };
 
 @NgModule({
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  declarations: [KeyValueFormComponent, FormSectionComponent],
+  exports: [
+    KeyValueFormComponent,
+    FormSectionComponent,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+})
+class TestModule {}
+
+@NgModule({
   declarations: [
     DemoComponent,
     DeploymentFormComponent,
     PodSpecFormComponent,
-    FormSectionComponent,
     ContainerFormComponent,
-    KeyValueFormComponent,
     ButtonDirective,
   ],
   imports: [
+    TestModule,
     CommonModule,
     FormsModule,
     HttpClientModule,

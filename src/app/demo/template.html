@@ -1,14 +1,4 @@
 <div *ngIf="contents" class="hint" [innerHTML]="contents"></div>
 <form [formGroup]="form">
-  <x-form-section>
-    <x-deployment formControlName="ui"></x-deployment>
-  </x-form-section>
-  <x-form-section>
-    <ng-monaco-editor
-      (monacoEditorChanged)="editorChanged($event)"
-      [options]="{ language: 'yaml' }"
-      formControlName="yaml"
-    ></ng-monaco-editor>
-  </x-form-section>
-  <button type="submit"></button>
+  <x-key-value-form formControlName="test"></x-key-value-form>
 </form>

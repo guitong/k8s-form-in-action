@@ -54,6 +54,7 @@ export class DemoComponent implements OnInit {
     this.form = this.fb.group({
       ui: [],
       yaml: [],
+      test: [{}],
     });
 
     const uiCtrl = this.form.get('ui');
